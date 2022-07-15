@@ -1,0 +1,14 @@
+
+public class Ogrenci {
+	
+	String ad;
+	String soyad;
+	int yas;
+	
+	Ogrenci(String a, String b, int y){
+		ad = a;
+		soyad = b;
+		yas = y;
+	}
+
+}
