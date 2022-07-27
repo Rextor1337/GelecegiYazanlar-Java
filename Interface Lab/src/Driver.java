@@ -15,13 +15,33 @@ public class Driver {
 		
 		elmalar[9] = new Elma(143, "Sari");
 		
+		/*
 		renkFiltrele("Sari", elmalar);
 		System.out.println("--------------");
 		agirlikFiltrele(15, elmalar);
 		System.out.println("--------------");
 		agirlikFiltrele2(15, elmalar);
+		*/
 		
+		RenkFiltresi renkFiltresi = new RenkFiltresi();
+		AgirlikFiltresi agirlikFiltresi = new AgirlikFiltresi();
+		ElmaFiltresi elmaFiltresi = new RenkFiltresi();
 		
+		filtrele(elmaFiltresi, elmalar);
+		filtrele(agirlikFiltresi , elmalar);
+		filtrele(renkFiltresi,elmalar);
+		
+	}
+	
+	public static void filtrele(ElmaFiltresi elmaFiltresi,Elma[] elmalar) {
+		for (int i = 0; i < elmalar.length; i++) {
+			Elma elma = elmalar[i];
+			if (elmaFiltresi.filtrele(elma)) {
+				
+				System.out.println(elma.getAgirlik() + " " + elma.getRenk());
+				
+			}
+		}
 	}
 	
 	
